@@ -6,22 +6,33 @@
 */
 
 #ifndef MY_H_
-#define MY_H_
+    #define MY_H_
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <getopt.h>
+    #include <arpa/inet.h>
+    #include <netinet/in.h>
+    #include <sys/socket.h>
+    #include <sys/types.h>
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <ctype.h>
-#include <dirent.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/socket.h>
+
+    #include <errno.h>
+#include <getopt.h>
+#include <inttypes.h>
 #include <netdb.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
-/* functions of main.c */
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+    
 
-void check_errors(int ac, char **av);
+
 
 #endif /* !MY_H_ */

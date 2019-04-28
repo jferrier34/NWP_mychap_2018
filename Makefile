@@ -1,33 +1,31 @@
 ##
-## EPITECH PROJECT, 2019
-## NWP_mychap_2018
+## EPITECH PROJECT, 2018
+## mychap
 ## File description:
-## Makefile
+## makefile
 ##
 
-all	:	$(NAME)
-
-.PHONY : all
-
-NAME	=	client
-
-
-CFLAGS	=	-Wall -Wextra -pedantic
-
-SRC	=	./src/main.c	\
+SRC	=	./src/main.c
 
 OBJ	=	$(SRC:.c=.o)
 
+NAME	=	client
 
-$(NAME)	:	$(OBJ)
-		gcc -o $(NAME) $(CFLAGS) $(OBJ)
+CC	=	gcc
 
-all	:	$(NAME)
+CFLAGS	=	-W -Wall -Wextra -I./include
 
-clean	:
-		rm -f $(OBJ)
+all:	$(NAME)
 
-fclean	:	clean
-		rm -f $(NAME)
+$(NAME):	$(OBJ)
+	$(CC) -o $@ $(SRC) $(CFLAGS)
 
-re	: fclean all
+clean:
+	$(RM) $(OBJ)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re:	fclean all
+
+.PHONY: clean fclean re all client
