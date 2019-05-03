@@ -14,10 +14,10 @@ int my_error(int ac)
     return (0);
 }
 
-int start_sock()
+int start_sock(void)
 {
     int nb = 1;
-    const int* my = &nb;
+    const int *my = &nb;
     struct sockaddr_in sin;
     int sock = 0;
     sock = socket(AF_INET, SOCK_RAW, IPPROTO_UDP);
@@ -34,16 +34,16 @@ int init(int ac)
     for_return = my_error(ac);
     if (for_return == 84)
         return (84);
-    return(0);
+    return (0);
     for_return = start_sock();
-    return(for_return);
+    return (for_return);
 }
 
 int main(int ac, char **av)
 {
-    int for_return;
-    for_return = init(ac); 
+    for_return = init(ac);
+    int for_return; 
     if (for_return == 84)
         return (84);
-    return(0);
+    return (0);
 }

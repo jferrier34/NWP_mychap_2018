@@ -6,17 +6,16 @@
 */
 
 #ifndef MY_H_
-    #define MY_H_
-    #include <stdio.h>
-    #include <stdlib.h>
-    #include <getopt.h>
-    #include <arpa/inet.h>
-    #include <netinet/in.h>
-    #include <sys/socket.h>
-    #include <sys/types.h>
+#define MY_H_
 
-
-    #include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <getopt.h>
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <errno.h>
 #include <getopt.h>
 #include <inttypes.h>
 #include <netdb.h>
@@ -32,7 +31,4 @@
 #include <sys/socket.h>
 #include <sys/types.h>
     
-
-
-
 #endif /* !MY_H_ */
